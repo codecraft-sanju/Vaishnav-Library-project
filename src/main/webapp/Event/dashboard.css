@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat as your preferred font */
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.1rem;
+}
+
+table td {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+table tr:nth-child(even) {
+    background-color: #bdc3c7;
+}
+
+/* Action Links */
+a {
+    text-decoration: none;
+    color: #3498db;
+    padding: 8px 16px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Table Row Hover Effect */
+table tr:hover {
+    background-color: #95a5a6;
+    transition: background-color 0.3s ease;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+	color:red;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Calendar Styling */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 280px;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Day Styling */
+.day {
+    padding: 15px;
+    background-color: #fdf3e7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.day:hover {
+    background-color: #ffdfa3;
+}
+
+.day.selected {
+    background-color: #ffac3d;
+    color: #fff;
+}
+
+/* Event List Styling */
+.event-list-container {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    flex: 1;
+}
+
+.event-list h2 {
+    color: #ffac3d;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Add Event Styling */
+.add-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.add-event input {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-event button {
+    padding: 8px 12px;
+    background-color: #3da9fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease;
+}
+
+.add-event button:hover {
+    background-color: #277bb4;
+}
+
+/* Attendance Message Styling */
+.attendance-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3da9fc;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .calendar-container, .event-list-container {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        max-width: 100%;
+    }
+
+    .add-event {
+        flex-direction: column;
+    }
+
+    .add-event input {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .day {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .calendar-header button, #yearSelect {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .add-event button {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
