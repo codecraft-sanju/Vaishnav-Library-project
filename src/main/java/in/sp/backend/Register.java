@@ -50,7 +50,7 @@ public class Register extends HttpServlet {
                 ps.setString(1, myname);
                 ps.setString(2, myemail);
                 ps.setString(3, mypass);
-                ps.setString(4, mydob);  // Insert the date of birth
+                ps.setString(4, mydob);  
                 ps.setString(5, mygender);
                 ps.setString(6, mycity);
 
